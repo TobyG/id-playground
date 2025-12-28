@@ -17,7 +17,8 @@ export function validateIMEI(imei: string): boolean {
   let sum = 0;
   for (let i = 0; i < 14; i++) {
     let digit = parseInt(cleaned[i], 10);
-    if (i % 2 === 1) { // Odd indices (1, 3, 5, 7, 9, 11, 13) get doubled
+    if (i % 2 === 1) {
+      // Odd indices (1, 3, 5, 7, 9, 11, 13) get doubled
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
